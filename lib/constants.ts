@@ -6,8 +6,8 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  tag: 'AI VOICE PLATFORM · 2026',
-  headline: ['CALLS THAT', 'THINK.', 'CLOSE.'],
+  tag: 'AI VOICE BOT · 2026',
+  headline: ['THE', 'VOICE', 'THAT', 'THINKS'],
   sub: 'SamwadBot replaces your call center with AI agents that speak Hindi, English, or Hinglish — and cost ₹2 per minute.',
   cta1: 'Deploy Your Agent',
   cta2: 'Watch Demo →',

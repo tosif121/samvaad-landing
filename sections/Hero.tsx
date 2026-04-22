@@ -24,30 +24,27 @@ export default function Hero() {
             [ {HERO.tag} ]
           </motion.span>
 
-          <motion.h1 className="flex flex-col gap-0 font-['Bebas_Neue'] text-[72px] md:text-[96px] leading-none text-white">
-            {HERO.headline.map((word, i) => (
-              <motion.span
-                key={i}
-                variants={item}
-                className="block"
-              >
-                {word}
-              </motion.span>
+          <motion.h1
+            variants={item}
+            style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              fontSize: 'clamp(44px, 6vw, 96px)',
+              lineHeight: 0.92,
+              color: '#fff',
+              letterSpacing: 1,
+            }}
+          >
+            {HERO.headline.slice(0, -2).map((word, i) => (
+              <span key={i}>{word}<br /></span>
             ))}
+            {HERO.headline[HERO.headline.length - 2]}{' '}
+            <span style={{ color: '#00FFD1' }}>{HERO.headline[HERO.headline.length - 1]}</span>
           </motion.h1>
 
           <motion.p variants={item} className="text-lg text-white/50 max-w-md leading-relaxed">
             {HERO.sub}
           </motion.p>
 
-          <motion.div variants={item} className="flex flex-wrap gap-4">
-            <a href="#" className="bg-[#00FFD1] text-black font-bold px-6 py-3 text-sm tracking-wide hover:shadow-[0_0_30px_rgba(0,255,209,0.4)] transition-all duration-300">
-              {HERO.cta1}
-            </a>
-            <a href="#" className="border border-white/30 text-white px-6 py-3 text-sm tracking-wide hover:border-white/70 transition-all duration-300">
-              {HERO.cta2}
-            </a>
-          </motion.div>
 
           <motion.div variants={item} className="flex flex-wrap gap-4 mt-2">
             {HERO.pills.map((p) => (

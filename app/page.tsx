@@ -24,12 +24,12 @@ export default function Home() {
             key="main"
             className="selection:bg-cyan-500/30 selection:text-cyan-400"
             initial={{ opacity: 0, scale: 0.98 }}
-
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: 'easeInOut' as const }}
           >
             <Navbar />
             <Hero />
+
             <StatsMarquee />
             <Features />
             <HowItWorks />
