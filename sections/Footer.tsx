@@ -13,23 +13,33 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-16">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-1 mb-4">
-              <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 20, color: '#fff', letterSpacing: 2 }}>SAMWAD</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00FFD1]" />
-              <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 20, color: '#fff', letterSpacing: 2 }}>BOT</span>
+          {/* Brand & Contact */}
+          <div className="col-span-2 md:col-span-1 flex flex-col gap-6">
+            <div>
+              <div className="flex items-center gap-1 mb-4">
+                <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 20, color: '#fff', letterSpacing: 2 }}>SAMWAD</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00FFD1]" />
+                <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 20, color: '#fff', letterSpacing: 2 }}>BOT</span>
+              </div>
+              <p className="text-white/30 text-xs leading-relaxed">
+                AI Voice Bot for Business.<br />Built by Iotcom.io — India.
+              </p>
             </div>
-            <p className="text-white/30 text-xs leading-relaxed mb-3">
-              AI Voice Bot for Business.<br />Built by Iotcom.io — India.
-            </p>
-            <a href={`tel:${SITE.phone.replace(/\s/g, '')}`} className="text-[#00FFD1]/60 text-xs hover:text-[#00FFD1] transition-colors">
-              {SITE.phone}
-            </a>
-            <br />
-            <a href={SITE.url} className="text-white/30 text-xs hover:text-white/60 transition-colors">
-              {SITE.url}
-            </a>
+
+            <div>
+              <p className="text-white/50 text-xs tracking-widest uppercase mb-3">Get In Touch</p>
+              <div className="flex flex-col gap-2">
+                <p className="text-white/30 text-xs leading-relaxed max-w-[200px]">
+                  {SITE.address}
+                </p>
+                <a href={`mailto:${SITE.email}`} className="text-white/30 text-xs hover:text-white/60 transition-colors">
+                  {SITE.email}
+                </a>
+                <a href={`tel:${SITE.phone.replace(/\s/g, '')}`} className="text-[#00FFD1]/60 text-xs hover:text-[#00FFD1] transition-colors font-mono">
+                  {SITE.phone}
+                </a>
+              </div>
+            </div>
           </div>
 
           {Object.entries(FOOTER_LINKS).map(([category, links]) => (
@@ -37,8 +47,15 @@ export default function Footer() {
               <p className="text-white/50 text-xs tracking-widest uppercase mb-4">{category}</p>
               <ul className="flex flex-col gap-2">
                 {links.map(link => (
-                  <li key={link}>
-                    <a href="#" className="text-white/30 text-sm hover:text-white transition-colors duration-200">{link}</a>
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      target={link.href.startsWith('http') ? '_blank' : '_self'}
+                      rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
+                      className="text-white/30 text-sm hover:text-white transition-colors duration-200"
+                    >
+                      {link.label}
+                    </a>
                   </li>
                 ))}
               </ul>

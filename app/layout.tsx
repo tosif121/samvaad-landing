@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   title: 'SamwadBot — AI Voice Bot for Business | Iotcom.io',
   description: 'Automate customer calls with human-like AI. SamwadBot by Iotcom.io handles inbound & outbound calls 24/7 in Hindi, English & Hinglish. Never miss a call again. Starting ₹2/min.',
   keywords: 'AI voice bot, automated call handling, AI calling software, voice automation India, Hindi AI bot, customer support automation, IVR replacement, Iotcom, SamwadBot, AI call center',
-  authors: [{ name: 'Iotcom.io', url: 'https://iotcom.io' }],
+  authors: [{ name: 'Iotcom.io' }],
   creator: 'Iotcom.io',
   publisher: 'Iotcom.io',
-  metadataBase: new URL('https://iotcom.io'),
+  metadataBase: new URL('http://localhost:3000'),
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
-    url: 'https://iotcom.io',
+    url: 'http://localhost:3000',
     title: 'SamwadBot — AI Voice Bot for Business | Iotcom.io',
     description: 'Never miss a customer call again. SamwadBot answers every call instantly with human-like AI — in Hindi, English & Hinglish. 24/7. ₹2/min.',
     siteName: 'SamwadBot by Iotcom.io',
@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               operatingSystem: 'Cloud',
               description: 'AI Voice Bot for Business — automate customer calls with human-like intelligence in Hindi, English & Hinglish.',
               offers: { '@type': 'Offer', price: '2', priceCurrency: 'INR', priceSpecification: { '@type': 'UnitPriceSpecification', price: '2', priceCurrency: 'INR', unitText: 'minute' } },
-              provider: { '@type': 'Organization', name: 'Iotcom.io', url: 'https://iotcom.io', telephone: '+918875242421' },
+              provider: { '@type': 'Organization', name: 'Iotcom.io', telephone: '+918875242421' },
             }),
           }}
         />

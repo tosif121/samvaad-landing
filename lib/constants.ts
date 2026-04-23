@@ -3,16 +3,16 @@ export const SITE = {
   company: 'Iotcom.io',
   tagline: 'AI Voice Bot for Business',
   description: 'Automate customer calls globally with completely human-like intelligence. SamwadBot by Iotcom.io handles inbound & outbound calls 24/7 in Hindi, English, and Hinglish.',
-  url: 'https://iotcom.io',
-  phone: '+91 88752 42421',
-  email: 'hello@iotcom.io',
+  url: '#',
+  phone: '+91 141 496 6922',
+  email: 'rishi@iotcom.io',
+  address: '84 Tilak Vihar A, Gokulpura, Jaipur, India',
 };
 
 export const NAV_LINKS = [
   { label: 'Features', href: '#features' },
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Pricing', href: '#pricing' },
-  { label: 'About', href: 'https://iotcom.io' },
 ];
 
 export const HERO = {
@@ -165,10 +165,29 @@ export const STATS = [
 ];
 
 export const FOOTER_LINKS = {
-  Product: ['Features', 'Pricing', 'How It Works', 'Changelog'],
-  Company: ['About Iotcom', 'Blog', 'Careers', 'Press'],
-  Legal: ['Privacy Policy', 'Terms of Service', 'Security', 'DPDP Compliance'],
-  Connect: ['Twitter', 'LinkedIn', 'GitHub', 'WhatsApp'],
+  Product: [
+    { label: 'Features', href: '#features' },
+    { label: 'Pricing', href: '#pricing' },
+    { label: 'How It Works', href: '#how-it-works' },
+    { label: 'Changelog', href: '#' },
+  ],
+  Company: [
+    { label: 'About Iotcom', href: '#' },
+    { label: 'Blog', href: '#' },
+    { label: 'Careers', href: '#' },
+    { label: 'Press', href: '#' },
+  ],
+  Legal: [
+    { label: 'Privacy Policy', href: '#' },
+    { label: 'Terms of Service', href: '#' },
+    { label: 'Security', href: '#' },
+    { label: 'DPDP Compliance', href: '#' },
+  ],
+  Connect: [
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/iotcom-io-jaipur/posts/?feedView=all' },
+    { label: 'Facebook', href: 'https://www.facebook.com/iotcom.io/' },
+    { label: 'Instagram', href: 'https://www.instagram.com/iotcom.io_jaipur/' },
+  ],
 };
 
 export const SEO = {
