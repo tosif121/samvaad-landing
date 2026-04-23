@@ -37,7 +37,7 @@ export default function Navbar() {
 
         {/* CTAs */}
         <div className="hidden md:flex items-center gap-3">
-          <a href="#" className="text-sm bg-[#00FFD1] text-black font-semibold px-4 py-2 hover:shadow-[0_0_20px_rgba(0,255,209,0.4)] transition-all duration-200">
+          <a href="/demo" className="text-sm bg-[#00FFD1] text-black font-semibold px-4 py-2 hover:shadow-[0_0_20px_rgba(0,255,209,0.4)] transition-all duration-200">
             Book a Demo
           </a>
         </div>
@@ -71,7 +71,7 @@ export default function Navbar() {
                 {l.label}
               </motion.a>
             ))}
-            <motion.a href="#" className="mt-4 bg-[#00FFD1] text-black font-bold px-8 py-3 text-lg"
+            <motion.a href="/demo" className="mt-4 bg-[#00FFD1] text-black font-bold px-8 py-3 text-lg"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
               Book a Demo
             </motion.a>

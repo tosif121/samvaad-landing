@@ -1,75 +1,86 @@
+export const SITE = {
+  name: 'SamwadBot',
+  company: 'Iotcom.io',
+  tagline: 'AI Voice Bot for Business',
+  description: 'Automate customer calls globally with completely human-like intelligence. SamwadBot by Iotcom.io handles inbound & outbound calls 24/7 in Hindi, English, and Hinglish.',
+  url: 'https://iotcom.io',
+  phone: '+91 88752 42421',
+  email: 'hello@iotcom.io',
+};
+
 export const NAV_LINKS = [
   { label: 'Features', href: '#features' },
-  { label: 'Pricing', href: '#pricing' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Docs', href: '#' },
+  { label: 'Pricing', href: '#pricing' },
+  { label: 'About', href: 'https://iotcom.io' },
 ];
 
 export const HERO = {
-  tag: 'AI VOICE BOT · 2026',
+  tag: 'AI VOICE BOT · IOTCOM.IO · 2026',
   headline: ['THE', 'VOICE', 'THAT', 'THINKS'],
-  sub: 'SamwadBot replaces your call center with AI agents that speak Hindi, English, or Hinglish — and cost ₹2 per minute.',
-  cta1: 'Deploy Your Agent',
-  cta2: 'Watch Demo →',
+  sub: 'What if your business never missed a call again? SamwadBot by Iotcom.io answers every customer call instantly — with human-like intelligence, in Hindi, English, or Hinglish.',
+  cta1: 'Book a Free Demo',
+  cta2: 'See How It Works →',
   pills: [
     { stat: '< ₹2 / min', label: 'Cost per minute' },
     { stat: '< 1s latency', label: 'Mouth-to-ear' },
-    { stat: '10,000+', label: 'Concurrent calls' },
+    { stat: '24 / 7', label: 'Always available' },
   ],
 };
 
 export const MARQUEE_ITEMS = [
-  '10,000 CONCURRENT CALLS',
-  '₹1.80/MIN AVERAGE COST',
-  '850ms MOUTH-TO-EAR',
-  '92% AI ACCURACY',
-  '4 LANGUAGES',
-  'ZERO HUMAN AGENTS NEEDED',
-  'GEMINI LIVE AI',
+  'NEVER MISS A CALL AGAIN',
+  'HUMAN-LIKE AI CONVERSATIONS',
+  '24/7 AUTOMATED CALL HANDLING',
+  'MULTI-LANGUAGE VOICE SUPPORT',
+  'REAL-TIME CALL MONITORING',
+  '< ₹2 PER MINUTE',
+  'POWERED BY GEMINI AI',
+  'BUILT BY IOTCOM.IO',
 ];
 
 export const FEATURES = [
   {
-    id: 'personas',
+    id: 'automation',
     large: true,
-    title: 'AI PERSONAS',
-    desc: 'Priya. Rahul. Your brand voice. Custom AI agents with distinct personalities, voices, and scripts — trained on your product.',
+    title: '24/7 AUTOMATED CALL HANDLING',
+    desc: 'Your business stays always available, always responsive, always ahead. SamwadBot handles every inbound and outbound call — day or night — without a single missed opportunity.',
     icon: '◈',
-  },
-  {
-    id: 'gemini',
-    large: false,
-    title: 'GEMINI LIVE',
-    desc: 'Sub-second voice AI. Real conversation. Powered by Google Gemini native audio.',
-    icon: '⬡',
-  },
-  {
-    id: 'cost',
-    large: false,
-    title: '₹2/MIN COST',
-    desc: '10x cheaper than human agents. No salaries, no training, no sick days.',
-    icon: '₹',
   },
   {
     id: 'multilingual',
     large: false,
-    title: 'MULTI-LINGUAL',
-    desc: 'Hindi, English, Hinglish. Auto-detect language from the first "Hello."',
+    title: 'MULTI-LANGUAGE SUPPORT',
+    desc: 'Speak your customer\'s language. Hindi, English, Hinglish — auto-detected from the first "Hello."',
     icon: '語',
   },
   {
-    id: 'campaign',
+    id: 'monitoring',
     large: false,
-    title: 'CAMPAIGN ENGINE',
-    desc: 'Power, Predictive, Manual dialing. CPS throttling. NDNC compliance built-in.',
+    title: 'REAL-TIME MONITORING',
+    desc: 'Live dashboards showing every active call, sentiment, and outcome. Full visibility, zero guesswork.',
+    icon: '⬡',
+  },
+  {
+    id: 'intelligence',
+    large: false,
+    title: 'IN-BUILT INTELLIGENCE',
+    desc: 'Not just automation — intelligent engagement. The bot understands context, handles objections, and escalates when needed.',
+    icon: '◎',
+  },
+  {
+    id: 'cost',
+    large: false,
+    title: 'FAST & SECURE',
+    desc: 'Sub-850ms response time. Indian servers. DPDP-compliant. Your customer data never leaves the country.',
     icon: '⚡',
   },
   {
-    id: 'rag',
+    id: 'smart',
     large: false,
-    title: 'RAG KNOWLEDGE',
-    desc: 'Upload PDFs. Sync Google Sheets. Bot knows your product inside out.',
-    icon: '◎',
+    title: 'SMART AUTOMATION',
+    desc: 'From lead handling to enquiry management — let AI handle conversations while your team focuses on growth.',
+    icon: '₹',
   },
 ];
 
@@ -77,22 +88,22 @@ export const HOW_IT_WORKS = [
   {
     step: '01',
     title: 'CALL INITIATED',
-    desc: 'Asterisk PBX dials out. ARI channel opens. AUDIO_UUID assigned.',
+    desc: 'Customer calls your number — or your campaign dials out. SamwadBot picks up instantly. Zero wait time.',
   },
   {
     step: '02',
     title: 'VOICE CAPTURED',
-    desc: 'VAD detects speech. Silence ignored. 8kHz PCM streams to Node.js.',
+    desc: 'AI detects speech in real-time. Silence is ignored. Every word is processed with sub-second precision.',
   },
   {
     step: '03',
-    title: 'GEMINI THINKS',
-    desc: '< 850ms to first word. Native audio in, native audio out. No STT/TTS overhead.',
+    title: 'AI UNDERSTANDS',
+    desc: 'Gemini Live AI processes the conversation. Context-aware. Handles objections. Feels completely natural.',
   },
   {
     step: '04',
     title: 'RESPONSE DELIVERED',
-    desc: 'Gap filler plays. Silence eliminated. Cost: ₹0.034 per turn.',
+    desc: 'Human-like reply in under 850ms. No robotic delays. Customer feels heard — instantly.',
   },
 ];
 
@@ -102,7 +113,13 @@ export const PRICING = [
     price: '₹999',
     period: '/month',
     mins: '500 mins included',
-    features: ['5 AI Personas', 'Inbound + Outbound', 'Basic Analytics', 'Email Support'],
+    features: [
+      '5 AI Personas',
+      'Inbound + Outbound',
+      'Hindi / English / Hinglish',
+      'Basic Analytics',
+      'Email Support',
+    ],
     cta: 'Get Started',
     popular: false,
   },
@@ -111,8 +128,15 @@ export const PRICING = [
     price: '₹4,999',
     period: '/month',
     mins: '5,000 mins included',
-    features: ['Unlimited Personas', 'Campaign Engine', 'RAG Knowledge Base', 'Priority Support', 'Custom Voices', 'API Access'],
-    cta: 'Deploy Now',
+    features: [
+      'Unlimited Personas',
+      'Campaign Engine',
+      'Real-Time Monitoring',
+      'CRM Integration',
+      'Priority Support',
+      'API Access',
+    ],
+    cta: 'Book a Demo',
     popular: true,
   },
   {
@@ -120,7 +144,14 @@ export const PRICING = [
     price: 'Custom',
     period: '',
     mins: 'Unlimited minutes',
-    features: ['Everything in Pro', 'Dedicated Infrastructure', 'SLA Guarantee', 'White-label Option', 'On-premise Deploy', '24/7 Support'],
+    features: [
+      'Everything in Pro',
+      'Dedicated Infrastructure',
+      'SLA Guarantee',
+      'White-label Option',
+      'On-premise Deploy',
+      '24/7 Support',
+    ],
     cta: 'Contact Sales',
     popular: false,
   },
@@ -134,8 +165,15 @@ export const STATS = [
 ];
 
 export const FOOTER_LINKS = {
-  Product: ['Features', 'Pricing', 'Changelog', 'Roadmap'],
-  Company: ['About', 'Blog', 'Careers', 'Press'],
-  Legal: ['Privacy', 'Terms', 'Security', 'Cookies'],
-  Connect: ['Twitter', 'LinkedIn', 'GitHub', 'Discord'],
+  Product: ['Features', 'Pricing', 'How It Works', 'Changelog'],
+  Company: ['About Iotcom', 'Blog', 'Careers', 'Press'],
+  Legal: ['Privacy Policy', 'Terms of Service', 'Security', 'DPDP Compliance'],
+  Connect: ['Twitter', 'LinkedIn', 'GitHub', 'WhatsApp'],
+};
+
+export const SEO = {
+  title: 'SamwadBot — AI Voice Bot for Business | Iotcom.io',
+  description: 'Automate customer calls with human-like AI. SamwadBot by Iotcom.io handles inbound & outbound calls 24/7 in Hindi, English & Hinglish. ₹2/min. No missed calls. Ever.',
+  keywords: 'AI voice bot, automated call handling, AI calling software, voice automation India, Hindi AI bot, customer support automation, IVR replacement, Iotcom, SamwadBot',
+  ogImage: '/og-image.png',
 };

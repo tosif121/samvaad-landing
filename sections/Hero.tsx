@@ -45,6 +45,14 @@ export default function Hero() {
             {HERO.sub}
           </motion.p>
 
+          <motion.div variants={item} className="flex flex-wrap gap-4">
+            <a href="/demo" className="bg-[#00FFD1] text-black font-bold px-6 py-3 text-sm tracking-wide hover:shadow-[0_0_30px_rgba(0,255,209,0.4)] transition-all duration-300">
+              {HERO.cta1}
+            </a>
+            <a href="#how-it-works" className="border border-white/30 text-white px-6 py-3 text-sm tracking-wide hover:border-white/70 transition-all duration-300">
+              {HERO.cta2}
+            </a>
+          </motion.div>
 
           <motion.div variants={item} className="flex flex-wrap gap-4 mt-2">
             {HERO.pills.map((p) => (
