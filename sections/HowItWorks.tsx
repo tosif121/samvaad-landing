@@ -12,9 +12,9 @@ export default function HowItWorks() {
 
   return (
     <section id="how-it-works" ref={containerRef} className="relative bg-[#050508]" style={{ height: '400vh' }}>
-      <div className="sticky top-0 h-screen overflow-hidden flex flex-col justify-center">
-        <div className="px-6 md:px-12 mb-8">
-          <h2 className="font-['Bebas_Neue'] text-[48px] md:text-[64px] text-white leading-none">HOW THE VOICE TRAVELS</h2>
+      <div className="sticky top-0 h-[100dvh] overflow-hidden flex flex-col justify-center">
+        <div className="px-6 md:px-12 mb-4 md:mb-8 mt-12 md:mt-0">
+          <h2 className="font-['Bebas_Neue'] text-[40px] md:text-[64px] text-white leading-none">HOW THE VOICE TRAVELS</h2>
         </div>
 
         <div className="overflow-hidden">
@@ -22,14 +22,14 @@ export default function HowItWorks() {
             {HOW_IT_WORKS.map((step, i) => (
               <div key={i} className="w-screen shrink-0 px-6 md:px-12 flex items-center">
                 <div className="max-w-lg">
-                  <div className="flex items-center gap-4 mb-6">
-                    <span className="font-['Bebas_Neue'] text-6xl text-[#00FFD1]/20">{step.step}</span>
+                  <div className="flex items-center gap-4 mb-4 md:mb-6">
+                    <span className="font-['Bebas_Neue'] text-5xl md:text-6xl text-[#00FFD1]/20">{step.step}</span>
                     {i < HOW_IT_WORKS.length - 1 && (
                       <div className="flex-1 h-px bg-linear-to-r from-[#00FFD1]/30 to-transparent" />
                     )}
                   </div>
-                  <h3 className="font-['Bebas_Neue'] text-[48px] md:text-[64px] text-white leading-none mb-4">{step.title}</h3>
-                  <p className="text-white/50 text-lg leading-relaxed mb-8">{step.desc}</p>
+                  <h3 className="font-['Bebas_Neue'] text-[36px] md:text-[64px] text-white leading-none mb-3 md:mb-4">{step.title}</h3>
+                  <p className="text-white/50 text-base md:text-lg leading-relaxed mb-6 md:mb-8">{step.desc}</p>
 
                   {/* Panel-specific visual */}
                   {i === 1 && (
