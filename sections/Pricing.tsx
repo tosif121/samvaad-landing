@@ -12,7 +12,9 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <h2 className="font-['Bebas_Neue'] text-[56px] md:text-[72px] text-white leading-none">TRANSPARENT. BRUTAL. CHEAP.</h2>
+          <h2 className="font-['Bebas_Neue'] text-[56px] md:text-[72px] text-white leading-none">
+            TRANSPARENT. <span style={{ color: '#FF6B2B' }}>BRUTAL.</span> <span style={{ color: '#00FFD1' }}>CHEAP.</span>
+          </h2>
           <p className="text-white/40 text-lg mt-2">No hidden fees. No per-seat nonsense.</p>
         </motion.div>
 

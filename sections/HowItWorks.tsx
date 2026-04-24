@@ -12,9 +12,11 @@ export default function HowItWorks() {
 
   return (
     <section id="how-it-works" ref={containerRef} className="relative bg-[#050508]" style={{ height: '400vh' }}>
-      <div className="sticky top-0 h-[100dvh] overflow-hidden flex flex-col justify-center">
+      <div className="sticky top-0 h-dvh overflow-hidden flex flex-col justify-center">
         <div className="px-6 md:px-12 mb-4 md:mb-8 mt-12 md:mt-0">
-          <h2 className="font-['Bebas_Neue'] text-[40px] md:text-[64px] text-white leading-none">HOW THE VOICE TRAVELS</h2>
+          <h2 className="font-['Bebas_Neue'] text-[40px] md:text-[64px] text-white leading-none">
+            HOW THE <span style={{ color: '#FF6B2B' }}>VOICE</span> <span style={{ color: '#00FFD1' }}>TRAVELS</span>
+          </h2>
         </div>
 
         <div className="overflow-hidden">

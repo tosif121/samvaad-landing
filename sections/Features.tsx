@@ -21,8 +21,10 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="font-['Bebas_Neue'] text-[56px] md:text-[72px] text-white leading-none">BUILT DIFFERENT</h2>
-          <p className="text-white/40 text-lg mt-2">Not a chatbot. Not a voicebot. A workforce.</p>
+          <h2 className="font-['Bebas_Neue'] text-[56px] md:text-[72px] text-white leading-none">
+            BUILT <span style={{ color: '#FF6B2B' }}>DIFFERENT</span>
+          </h2>
+          <p className="text-white/40 text-lg mt-2">Not a chatbot. Not a voicebot. <span style={{ color: '#00FFD1' }}>A workforce.</span></p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

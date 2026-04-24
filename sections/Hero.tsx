@@ -37,7 +37,7 @@ export default function Hero() {
             {HERO.headline.slice(0, -2).map((word, i) => (
               <span key={i}>{word}<br /></span>
             ))}
-            {HERO.headline[HERO.headline.length - 2]}{' '}
+            <span style={{ color: '#FF6B2B' }}>{HERO.headline[HERO.headline.length - 2]}</span>{' '}
             <span style={{ color: '#00FFD1' }}>{HERO.headline[HERO.headline.length - 1]}</span>
           </motion.h1>
 

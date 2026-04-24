@@ -34,7 +34,7 @@ export default function CTASection() {
           className="text-white mb-8"
         >
           YOUR BUSINESS<br />
-          NEVER MISSES<br />
+          <span style={{ color: '#FF6B2B' }}>NEVER MISSES</span><br />
           <span style={{ color: '#00FFD1' }}>A CALL AGAIN.</span>
         </motion.h2>
 

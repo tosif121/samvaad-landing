@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { NAV_LINKS } from '../lib/constants';
 
 export default function Navbar() {
@@ -20,10 +21,15 @@ export default function Navbar() {
         animate={scrolled ? { backgroundColor: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(255,255,255,0.05)' } : { backgroundColor: 'rgba(0,0,0,0)', backdropFilter: 'blur(0px)', borderBottom: '1px solid rgba(255,255,255,0)' }}
       >
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
-          <span className="font-['Bebas_Neue'] text-2xl text-white tracking-wider">SAMWAD</span>
-          <span className="w-2 h-2 rounded-full bg-[#00FFD1] mt-1" />
-          <span className="font-['Bebas_Neue'] text-2xl text-white tracking-wider">BOT</span>
+        <a href="/" className="flex items-center gap-3">
+          <Image
+            src="/images/logo.png"
+            alt="Iotcom.io — SamwadBot"
+            width={200}
+            height={60}
+            className="object-contain"
+            priority
+          />
         </a>
 
         {/* Desktop nav */}
@@ -59,6 +65,7 @@ export default function Navbar() {
             className="fixed inset-0 z-30 bg-black flex flex-col items-center justify-center gap-8"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
           >
+            <Image src="/images/logo.png" alt="Iotcom.io" width={120} height={36} className="object-contain mb-4" />
             {NAV_LINKS.map((l, i) => (
               <motion.a
                 key={l.label} href={l.href}

@@ -4,9 +4,10 @@ import { useRef } from 'react';
 import { STATS } from '../lib/constants';
 import { motion } from 'framer-motion';
 
-function StatItem({ stat }: { stat: { number: string; label: string } }) {
+function StatItem({ stat, index }: { stat: { number: string; label: string }; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true });
+  const color = index % 2 === 0 ? '#00FFD1' : '#FF6B2B';
 
   return (
     <motion.div
@@ -17,7 +18,8 @@ function StatItem({ stat }: { stat: { number: string; label: string } }) {
       className="flex flex-col items-center gap-2"
     >
       <motion.span
-        className="font-['Bebas_Neue'] text-[72px] md:text-[96px] text-[#00FFD1] leading-none"
+        style={{ color }}
+        className="font-['Bebas_Neue'] text-[72px] md:text-[96px] leading-none"
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -45,7 +47,7 @@ export default function SocialProof() {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-          {STATS.map(stat => <StatItem key={stat.label} stat={stat} />)}
+          {STATS.map((stat, i) => <StatItem key={stat.label} stat={stat} index={i} />)}
         </div>
       </div>
     </section>

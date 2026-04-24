@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               operatingSystem: 'Cloud',
               description: 'AI Voice Bot for Business — automate customer calls with human-like intelligence in Hindi, English & Hinglish.',
               offers: { '@type': 'Offer', price: '2', priceCurrency: 'INR', priceSpecification: { '@type': 'UnitPriceSpecification', price: '2', priceCurrency: 'INR', unitText: 'minute' } },
-              provider: { '@type': 'Organization', name: 'Iotcom.io', telephone: '+918875242421' },
+              provider: { '@type': 'Organization', name: 'Iotcom.io', telephone: '+919358535763' },
             }),
           }}
         />

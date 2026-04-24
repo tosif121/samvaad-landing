@@ -3,9 +3,9 @@ export const SITE = {
   company: 'Iotcom.io',
   tagline: 'AI Voice Bot for Business',
   description: 'Automate customer calls globally with completely human-like intelligence. SamwadBot by Iotcom.io handles inbound & outbound calls 24/7 in Hindi, English, and Hinglish.',
-  url: '#',
-  phone: '+91 141 496 6922',
-  email: 'rishi@iotcom.io',
+  url: 'https://iotcom.io',
+  phone: '+91 93585 35763',
+  email: 'contact@iotcom.io',
   address: '84 Tilak Vihar A, Gokulpura, Jaipur, India',
 };
 
@@ -172,9 +172,9 @@ export const FOOTER_LINKS = {
     { label: 'Changelog', href: '#' },
   ],
   Company: [
-    { label: 'About Iotcom', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Careers', href: '#' },
+    { label: 'About Iotcom', href: '/about' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Careers', href: '/careers' },
     { label: 'Press', href: '#' },
   ],
   Legal: [
@@ -185,9 +185,17 @@ export const FOOTER_LINKS = {
   ],
   Connect: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/company/iotcom-io-jaipur/posts/?feedView=all' },
-    { label: 'Facebook', href: 'https://www.facebook.com/iotcom.io/' },
+    { label: 'Facebook', href: 'https://www.facebook.com/people/Iotcomio-Jaipur/61580682913494/' },
     { label: 'Instagram', href: 'https://www.instagram.com/iotcom.io_jaipur/' },
+    { label: 'WhatsApp', href: 'https://wa.me/919358535763' },
   ],
+};
+
+export const SOCIAL_LINKS = {
+  facebook:  'https://www.facebook.com/people/Iotcomio-Jaipur/61580682913494/',
+  linkedin:  'https://www.linkedin.com/company/iotcom-io-jaipur/posts/?feedView=all',
+  instagram: 'https://www.instagram.com/iotcom.io_jaipur/',
+  whatsapp:  'https://wa.me/919358535763',
 };
 
 export const SEO = {

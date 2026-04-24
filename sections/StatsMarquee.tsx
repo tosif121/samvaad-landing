@@ -15,7 +15,7 @@ export default function StatsMarquee() {
         {items.map((item, i) => (
           <span key={i} className="font-['Bebas_Neue'] text-2xl text-white tracking-widest flex items-center gap-4">
             {item}
-            <span className="text-[#00FFD1]">·</span>
+            <span style={{ color: i % 2 === 0 ? '#00FFD1' : '#FF6B2B' }}>·</span>
           </span>
         ))}
       </motion.div>
