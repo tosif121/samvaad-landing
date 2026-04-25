@@ -26,16 +26,6 @@ const VALUES = [
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#050508] text-white">
-      {/* Nav */}
-      <nav className="px-6 md:px-12 py-5 flex items-center justify-between border-b border-white/5">
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/images/logo.png" alt="Iotcom.io Logo" width={120} height={36} className="object-contain" />
-        </Link>
-        <Link href="/demo" className="text-sm bg-[#00FFD1] text-black font-bold px-5 py-2 hover:shadow-[0_0_20px_rgba(0,255,209,0.4)] transition-all">
-          Book a Demo
-        </Link>
-      </nav>
-
       {/* Hero */}
       <section className="max-w-5xl mx-auto px-6 md:px-12 py-24">
         <p className="font-mono text-xs text-[#00FFD1]/60 tracking-[0.3em] uppercase mb-4">[ About Iotcom.io ]</p>
@@ -114,11 +104,6 @@ export default function AboutPage() {
         </Link>
       </section>
 
-      {/* Footer */}
-      <div className="border-t border-white/5 px-6 md:px-12 py-6 flex items-center justify-between">
-        <p className="text-white/20 text-xs">© 2026 Iotcom.io · Jaipur, India 🇮🇳</p>
-        <Link href="/" className="text-white/30 text-xs hover:text-white transition-colors">← Back to SamwadBot</Link>
-      </div>
     </main>
   );
 }

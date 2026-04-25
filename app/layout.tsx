@@ -3,6 +3,7 @@ import './globals.css';
 import LenisProvider from '@/providers/LenisProvider';
 import GrainOverlay from '@/components/GrainOverlay';
 import CustomCursor from '@/components/CustomCursor';
+import SiteLayout from '@/components/SiteLayout';
 
 export const metadata: Metadata = {
   title: 'SamwadBot — AI Voice Bot for Business | Iotcom.io',
@@ -61,7 +62,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LenisProvider>
           <GrainOverlay />
           <CustomCursor />
-          {children}
+          <SiteLayout>
+            {children}
+          </SiteLayout>
         </LenisProvider>
       </body>
     </html>
