@@ -64,11 +64,11 @@ export default function DemoPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#050508] flex items-center justify-center px-4 py-20">
+    <main className="min-h-screen bg-white voice-grid flex items-center justify-center px-4 py-24">
       {/* Background glow */}
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,255,209,0.04)_0%,transparent_60%)] pointer-events-none" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(20,241,217,0.18),transparent_34rem),radial-gradient(circle_at_82%_24%,rgba(0,0,0,0.16),transparent_32rem)] pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="relative z-10 w-full max-w-6xl grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
 
         {/* Left — brand */}
         <motion.div
@@ -77,41 +77,40 @@ export default function DemoPage() {
           transition={{ duration: 0.6 }}
           className="lg:sticky lg:top-20"
         >
-          <Link href="/" className="inline-flex items-center gap-1 mb-10 group">
-            <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 22, color: '#fff', letterSpacing: 2 }}>SAMWAD</span>
-            <span className="w-2 h-2 rounded-full bg-[#00FFD1] mt-0.5" />
-            <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 22, color: '#fff', letterSpacing: 2 }}>BOT</span>
+          <Link href="/" className="inline-flex items-center gap-2 mb-10 group rounded-full border border-black/10 bg-white/80 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-black">
+            <span className="w-2 h-2 rounded-full bg-green-500" />
+            Samvaad Demo
           </Link>
 
-          <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(40px, 5vw, 64px)', lineHeight: 0.92, color: '#fff', letterSpacing: 1 }}>
-            SEE THE<br />
-            VOICE<br />
-            <span style={{ color: '#00FFD1' }}>IN ACTION</span>
+          <h1 className="font-sans text-6xl md:text-8xl font-black uppercase tracking-[-0.08em] leading-[0.82] text-black">
+            Hear Your<br />
+            AI Agent<br />
+            <span className="bg-gradient-to-r from-black to-green-500 bg-clip-text text-transparent">Go Live</span>
           </h1>
 
-          <p className="text-white/50 text-base mt-6 leading-relaxed max-w-sm">
-            Book a 30-minute live demo. We'll show you a real AI agent calling a real number — in Hindi, English, or Hinglish — handling your exact use case.
+          <p className="text-black/65 text-base mt-6 leading-relaxed max-w-sm">
+            Book a 30-minute live demo. We&apos;ll show you a real AI agent calling a real number — in Hindi, English, or Hinglish — handling your exact use case.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3">
+          <div className="mt-8 grid gap-3">
             {[
               '30-min live AI call demo',
               'Custom persona for your industry',
               'Real cost breakdown for your volume',
               'Deploy in 48 hours — no hardware',
             ].map(item => (
-              <div key={item} className="flex items-center gap-3 text-sm text-white/60">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00FFD1] shrink-0" />
+              <div key={item} className="glass-panel flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-black/70">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500 shrink-0" />
                 {item}
               </div>
             ))}
           </div>
 
-          <div className="mt-10 pt-8 border-t border-white/5">
-            <p className="text-white/20 text-xs tracking-widest uppercase">Trusted by teams across India</p>
+          <div className="mt-10 pt-8 border-t border-black/10">
+            <p className="text-black/40 text-xs tracking-widest uppercase">Trusted by teams across India</p>
             <div className="flex gap-6 mt-4">
               {['Banking', 'Real Estate', 'Healthcare', 'E-commerce'].map(i => (
-                <span key={i} className="text-white/30 text-xs">{i}</span>
+                <span key={i} className="text-black/55 text-xs">{i}</span>
               ))}
             </div>
           </div>
@@ -129,20 +128,20 @@ export default function DemoPage() {
                 key="success"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="border border-[#00FFD1]/20 bg-[#00FFD1]/5 p-10 text-center"
+                className="glass-panel rounded-[2rem] p-10 text-center"
               >
-                <div className="w-14 h-14 rounded-full border-2 border-[#00FFD1] flex items-center justify-center mx-auto mb-6">
+                <div className="w-14 h-14 rounded-full border-2 border-green-600 flex items-center justify-center mx-auto mb-6">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 13l4 4L19 7" stroke="#00FFD1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M5 13l4 4L19 7" stroke="#16A34A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 36, color: '#fff', letterSpacing: 1 }}>
+                <h2 className="text-4xl font-black uppercase tracking-[-0.04em] text-black">
                   DEMO BOOKED
                 </h2>
-                <p className="text-white/50 text-sm mt-3 leading-relaxed">
-                  We'll reach out to <span className="text-white">{form.email}</span> within 24 hours to confirm your slot.
+                <p className="text-black/65 text-sm mt-3 leading-relaxed">
+                  We&apos;ll reach out to <span className="text-black">{form.email}</span> within 24 hours to confirm your slot.
                 </p>
-                <Link href="/" className="inline-block mt-8 text-[#00FFD1] text-sm border border-[#00FFD1]/30 px-6 py-2 hover:bg-[#00FFD1]/10 transition-colors">
+                <Link href="/" className="inline-block mt-8 text-green-600 text-sm border border-green-600/30 px-6 py-2 hover:bg-green-600/10 transition-colors">
                   ← Back to home
                 </Link>
               </motion.div>
@@ -150,11 +149,11 @@ export default function DemoPage() {
               <motion.form
                 key="form"
                 onSubmit={handleSubmit}
-                className="border border-white/10 bg-white/2 p-8 flex flex-col gap-5"
+                className="glass-panel rounded-[2rem] p-8 md:p-10 flex flex-col gap-5"
               >
                 <div>
-                  <p className="text-white/40 text-xs tracking-widest uppercase mb-1">Step 1 of 1</p>
-                  <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 28, color: '#fff', letterSpacing: 1 }}>
+                  <p className="text-black text-xs font-black tracking-[0.24em] uppercase mb-2">Step 1 of 1</p>
+                  <h2 className="text-3xl font-black uppercase tracking-[-0.04em] text-black">
                     SCHEDULE YOUR DEMO
                   </h2>
                 </div>
@@ -197,8 +196,8 @@ export default function DemoPage() {
                         onClick={() => set('useCase', u.value)}
                         className={`px-3 py-2 text-xs border transition-all duration-150 text-left ${
                           form.useCase === u.value
-                            ? 'border-[#00FFD1]/60 bg-[#00FFD1]/10 text-[#00FFD1]'
-                            : 'border-white/10 text-white/40 hover:border-white/30 hover:text-white/70'
+                            ? 'border-green-500/70 bg-green-500/15 text-black font-black'
+                            : 'border-black/10 text-black/55 hover:border-black/25 hover:text-black'
                         }`}>
                         {u.label}
                       </button>
@@ -214,8 +213,8 @@ export default function DemoPage() {
                         onClick={() => set('callVolume', v.value)}
                         className={`px-3 py-2 text-xs border transition-all duration-150 text-left ${
                           form.callVolume === v.value
-                            ? 'border-[#00FFD1]/60 bg-[#00FFD1]/10 text-[#00FFD1]'
-                            : 'border-white/10 text-white/40 hover:border-white/30 hover:text-white/70'
+                            ? 'border-green-500/70 bg-green-500/15 text-black font-black'
+                            : 'border-black/10 text-black/55 hover:border-black/25 hover:text-black'
                         }`}>
                         {v.label}
                       </button>
@@ -233,7 +232,7 @@ export default function DemoPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-[#00FFD1] text-black font-bold py-4 text-sm tracking-widest uppercase hover:shadow-[0_0_30px_rgba(0,255,209,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                  className="w-full rounded-2xl bg-black text-white font-black py-4 text-sm tracking-widest uppercase hover:shadow-[0_20px_50px_rgba(8,17,31,0.22)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
                 >
                   {loading ? (
                     <>
@@ -243,7 +242,7 @@ export default function DemoPage() {
                   ) : 'Book My Demo →'}
                 </button>
 
-                <p className="text-white/20 text-xs text-center">
+                <p className="text-black/40 text-xs text-center">
                   No credit card · No commitment · Response within 24 hours
                 </p>
               </motion.form>
@@ -259,7 +258,7 @@ export default function DemoPage() {
 function Field({ label, error, children }: { label: string; error?: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-xs text-white/40 tracking-wide">{label}</label>
+      <label className="text-xs text-black/55 tracking-wide">{label}</label>
       {children}
       {error && <p className="text-red-400 text-xs">{error}</p>}
     </div>
@@ -267,4 +266,4 @@ function Field({ label, error, children }: { label: string; error?: string; chil
 }
 
 const input = (hasError: boolean) =>
-  `w-full bg-white/5 border ${hasError ? 'border-red-500/50' : 'border-white/10'} text-white text-sm px-4 py-3 outline-none focus:border-[#00FFD1]/50 focus:bg-[#00FFD1]/5 transition-all duration-150 placeholder:text-white/20`;
+  `w-full rounded-xl bg-white/80 border ${hasError ? 'border-red-500/50' : 'border-black/10'} text-black text-sm px-4 py-3 outline-none focus:border-green-500/80 focus:bg-green-500/5 transition-all duration-150 placeholder:text-black/40`;

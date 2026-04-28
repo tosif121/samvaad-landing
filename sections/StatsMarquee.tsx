@@ -1,21 +1,24 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { MARQUEE_ITEMS } from '../lib/constants';
 
 const items = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
 
 export default function StatsMarquee() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div className="relative overflow-hidden border-y border-[#00FFD1]/10 py-4 bg-transparent backdrop-blur-sm">
+    <div className="relative overflow-hidden border-y border-black/10 bg-black py-5 text-white" id="stats">
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(20,241,217,0.12),transparent,rgba(0,0,0,0.16))]" />
       <motion.div
-        className="flex gap-12 whitespace-nowrap"
-        animate={{ x: ['0%', '-33.33%'] }}
-        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+        className="relative flex gap-14 whitespace-nowrap"
+        animate={shouldReduceMotion ? {} : { x: ['0%', '-33.33%'] }}
+        transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
       >
         {items.map((item, i) => (
-          <span key={i} className="font-['Bebas_Neue'] text-2xl text-white tracking-widest flex items-center gap-4">
+          <span key={i} className="flex items-center gap-4 text-sm font-black uppercase tracking-[0.24em] text-white/90">
             {item}
-            <span style={{ color: i % 2 === 0 ? '#00FFD1' : '#FF6B2B' }}>·</span>
+            <span className={i % 2 === 0 ? 'text-green-600' : 'text-orange-500'}>+</span>
           </span>
         ))}
       </motion.div>

@@ -1,8 +1,8 @@
 export const SITE = {
-  name: 'SamwadBot',
+  name: 'Samvaad',
   company: 'Iotcom.io',
-  tagline: 'AI Voice Bot for Business',
-  description: 'Automate customer calls globally with completely human-like intelligence. SamwadBot by Iotcom.io handles inbound & outbound calls 24/7 in Hindi, English, and Hinglish.',
+  tagline: 'AI Voice Calling Platform for Business',
+  description: 'Deploy human-like AI calling agents for sales, support, collections, and booking workflows. Samvaad handles inbound and outbound calls 24/7 in Hindi, English, and Hinglish.',
   url: 'https://iotcom.io',
   phone: '+91 93585 35763',
   email: 'contact@iotcom.io',
@@ -16,71 +16,71 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  tag: 'AI VOICE BOT · IOTCOM.IO · 2026',
-  headline: ['THE', 'VOICE', 'THAT', 'THINKS'],
-  sub: 'What if your business never missed a call again? SamwadBot by Iotcom.io answers every customer call instantly — with human-like intelligence, in Hindi, English, or Hinglish.',
+  tag: 'AI VOICE CALLING · LIVE AGENTS · 24/7',
+  headline: ['AI', 'CALLS', 'THAT', 'CONVERT'],
+  sub: 'Samvaad answers, qualifies, books, reminds, and follows up with customers like a trained calling team — in Hindi, English, or Hinglish, day and night.',
   cta1: 'Book a Free Demo',
   cta2: 'See How It Works →',
   pills: [
-    { stat: '< ₹2 / min', label: 'Cost per minute' },
-    { stat: '< 1s latency', label: 'Mouth-to-ear' },
-    { stat: '24 / 7', label: 'Always available' },
+    { stat: '847ms', label: 'Avg response' },
+    { stat: '24/7', label: 'Inbound + outbound' },
+    { stat: '₹2/min', label: 'Usage based' },
   ],
 };
 
 export const MARQUEE_ITEMS = [
-  'NEVER MISS A CALL AGAIN',
-  'HUMAN-LIKE AI CONVERSATIONS',
-  '24/7 AUTOMATED CALL HANDLING',
-  'MULTI-LANGUAGE VOICE SUPPORT',
-  'REAL-TIME CALL MONITORING',
-  '< ₹2 PER MINUTE',
-  'POWERED BY GEMINI AI',
-  'BUILT BY IOTCOM.IO',
+  'AI SALES CALLING',
+  'INBOUND SUPPORT AGENTS',
+  'APPOINTMENT BOOKING',
+  'COLLECTIONS FOLLOW-UP',
+  'HINDI ENGLISH HINGLISH',
+  'LIVE CALL MONITORING',
+  'CRM READY WORKFLOWS',
+  'DEPLOY IN 48 HOURS',
 ];
 
 export const FEATURES = [
   {
     id: 'automation',
     large: true,
-    title: '24/7 AUTOMATED CALL HANDLING',
-    desc: 'Your business stays always available, always responsive, always ahead. SamwadBot handles every inbound and outbound call — day or night — without a single missed opportunity.',
-    icon: '◈',
+    title: 'AI AGENTS FOR EVERY CALL FLOW',
+    desc: 'Create calling agents for lead qualification, support triage, payment reminders, appointment booking, surveys, and follow-ups. Each agent follows your script, tone, and escalation rules.',
+    icon: '☎',
   },
   {
     id: 'multilingual',
     large: false,
-    title: 'MULTI-LANGUAGE SUPPORT',
-    desc: 'Speak your customer\'s language. Hindi, English, Hinglish — auto-detected from the first "Hello."',
-    icon: '語',
+    title: 'NATIVE INDIAN LANGUAGE CALLS',
+    desc: 'Speak naturally in Hindi, English, or Hinglish. Samvaad detects language and switches mid-call without sounding robotic.',
+    icon: 'भ',
   },
   {
     id: 'monitoring',
     large: false,
-    title: 'REAL-TIME MONITORING',
-    desc: 'Live dashboards showing every active call, sentiment, and outcome. Full visibility, zero guesswork.',
-    icon: '⬡',
+    title: 'LIVE CALL COMMAND CENTER',
+    desc: 'Track every active call, intent, sentiment, transcript, outcome, and escalation from one clean operations dashboard.',
+    icon: '◌',
   },
   {
     id: 'intelligence',
     large: false,
-    title: 'IN-BUILT INTELLIGENCE',
-    desc: 'Not just automation — intelligent engagement. The bot understands context, handles objections, and escalates when needed.',
-    icon: '◎',
+    title: 'CONTEXT AWARE CONVERSATIONS',
+    desc: 'The agent understands customer intent, handles objections, asks follow-up questions, and transfers to your team when needed.',
+    icon: '✦',
   },
   {
     id: 'cost',
     large: false,
-    title: 'FAST & SECURE',
-    desc: 'Sub-850ms response time. Indian servers. DPDP-compliant. Your customer data never leaves the country.',
+    title: 'SECURE BY DEFAULT',
+    desc: 'Indian servers, DPDP-aligned workflows, audit-ready logs, and secure CRM/API integrations for production teams.',
     icon: '⚡',
   },
   {
     id: 'smart',
     large: false,
-    title: 'SMART AUTOMATION',
-    desc: 'From lead handling to enquiry management — let AI handle conversations while your team focuses on growth.',
-    icon: '₹',
+    title: 'AUTOMATED FOLLOW-UP LOOPS',
+    desc: 'Trigger retries, reminders, WhatsApp nudges, CRM notes, and human handoffs automatically after each call outcome.',
+    icon: '↻',
   },
 ];
 
@@ -88,7 +88,7 @@ export const HOW_IT_WORKS = [
   {
     step: '01',
     title: 'CALL INITIATED',
-    desc: 'Customer calls your number — or your campaign dials out. SamwadBot picks up instantly. Zero wait time.',
+    desc: 'Customer calls your number — or your campaign dials out. Samvaad picks up instantly. Zero wait time.',
   },
   {
     step: '02',
@@ -199,8 +199,8 @@ export const SOCIAL_LINKS = {
 };
 
 export const SEO = {
-  title: 'SamwadBot — AI Voice Bot for Business | Iotcom.io',
-  description: 'Automate customer calls with human-like AI. SamwadBot by Iotcom.io handles inbound & outbound calls 24/7 in Hindi, English & Hinglish. ₹2/min. No missed calls. Ever.',
-  keywords: 'AI voice bot, automated call handling, AI calling software, voice automation India, Hindi AI bot, customer support automation, IVR replacement, Iotcom, SamwadBot',
+  title: 'Samvaad — AI Voice Bot for Business | Iotcom.io',
+  description: 'Automate customer calls with human-like AI. Samvaad by Iotcom.io handles inbound & outbound calls 24/7 in Hindi, English & Hinglish. ₹2/min. No missed calls. Ever.',
+  keywords: 'AI voice bot, automated call handling, AI calling software, voice automation India, Hindi AI bot, customer support automation, IVR replacement, Iotcom, Samvaad',
   ogImage: '/og-image.png',
 };

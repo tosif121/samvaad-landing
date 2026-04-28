@@ -52,8 +52,8 @@ export default function CustomCursor() {
 
   return (
     <>
-      <div ref={dotRef} className="fixed top-0 left-0 w-[6px] h-[6px] rounded-full bg-[#00FFD1] z-9999 pointer-events-none transition-opacity duration-200" style={{ willChange: 'transform' }} />
-      <div ref={ringRef} className="fixed top-0 left-0 w-[40px] h-[40px] rounded-full border border-white/20 z-9998 pointer-events-none transition-all duration-300" style={{ willChange: 'transform' }} />
+      <div ref={dotRef} className="fixed top-0 left-0 w-[6px] h-[6px] rounded-full bg-green-600 z-9999 pointer-events-none transition-opacity duration-200" style={{ willChange: 'transform' }} />
+      <div ref={ringRef} className="fixed top-0 left-0 w-[40px] h-[40px] rounded-full border border-black/20 z-9998 pointer-events-none transition-all duration-300" style={{ willChange: 'transform' }} />
     </>
   );
 }

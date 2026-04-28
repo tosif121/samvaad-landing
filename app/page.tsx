@@ -4,11 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Preloader from '../components/Preloader';
 import Hero from '../sections/Hero';
 import StatsMarquee from '../sections/StatsMarquee';
-import Features from '../sections/Features';
+import Metrics from '../sections/Metrics';
 import HowItWorks from '../sections/HowItWorks';
 import Pricing from '../sections/Pricing';
-import SocialProof from '../sections/SocialProof';
-import CTASection from '../sections/CTASection';
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -26,11 +24,9 @@ export default function Home() {
           >
             <Hero />
             <StatsMarquee />
-            <Features />
             <HowItWorks />
+            <Metrics />
             <Pricing />
-            <SocialProof />
-            <CTASection />
           </motion.div>
         )}
       </AnimatePresence>
