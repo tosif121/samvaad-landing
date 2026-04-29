@@ -12,7 +12,7 @@ export default function BlogPage() {
     <main className="min-h-screen bg-white text-black">
 
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-16">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-24 md:pt-32 pb-10 md:pb-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[10px] font-black tracking-[0.2em] uppercase border border-black/10 rounded-full px-4 py-1.5 text-black/40 mb-5">
             Iotcom.io Blog
@@ -53,7 +53,7 @@ export default function BlogPage() {
       </section>
 
       {/* Rest of posts */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {rest.map((post, i) => (
             <Link href={`/blog/${post.slug}`} key={post.slug} className="block">
@@ -94,10 +94,10 @@ export default function BlogPage() {
             Get new articles in your inbox
           </h3>
           <p className="text-black/50 text-sm mb-6">No spam. Just practical AI voice insights, once a week.</p>
-          <div className="flex gap-2 max-w-sm mx-auto">
+          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input type="email" placeholder="your@email.com"
-              className="flex-1 text-sm px-4 py-2.5 border border-black/10 rounded-xl bg-white focus:outline-none focus:border-green-500 transition-colors" />
-            <button className="bg-green-500 text-white font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-green-600 transition-colors whitespace-nowrap">
+              className="flex-1 text-sm px-5 py-3 border border-black/10 rounded-xl bg-white focus:outline-none focus:border-green-500 transition-colors min-h-[48px]" />
+            <button className="bg-green-500 text-white font-bold text-sm px-8 py-3 rounded-xl hover:bg-green-600 active:scale-95 transition-all whitespace-nowrap min-h-[48px]">
               Subscribe
             </button>
           </div>

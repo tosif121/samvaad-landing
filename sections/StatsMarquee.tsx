@@ -16,7 +16,7 @@ export default function StatsMarquee() {
         transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
       >
         {items.map((item, i) => (
-          <span key={i} className="flex items-center gap-4 text-sm font-black uppercase tracking-[0.24em] text-white/90">
+          <span key={i} className="flex items-center gap-4 text-[10px] md:text-sm font-black uppercase tracking-[0.24em] text-white/90">
             {item}
             <span className={i % 2 === 0 ? 'text-green-600' : 'text-orange-500'}>+</span>
           </span>

@@ -3,7 +3,7 @@ export const SITE = {
   company: 'Iotcom.io',
   tagline: 'AI Voice Calling Platform for Business',
   description: 'Deploy human-like AI calling agents for sales, support, collections, and booking workflows. Samvaad handles inbound and outbound calls 24/7 in Hindi, English, and Hinglish.',
-  url: 'https://iotcom.io',
+  url: 'https://samwaad.iotcom.io',
   phone: '+91 93585 35763',
   email: 'contact@iotcom.io',
   address: '84 Tilak Vihar A, Gokulpura, Jaipur, India',

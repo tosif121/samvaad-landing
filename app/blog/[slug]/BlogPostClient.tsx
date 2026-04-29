@@ -23,9 +23,9 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
   const toc = sections.filter((s) => s.type === 'h2').map((s) => s.text);
 
   return (
-    <main className="min-h-screen bg-white text-slate-900 pb-24">
-      <section className="pt-32 pb-16 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-6">
+    <main className="min-h-screen bg-white text-slate-900 pb-16 md:pb-24">
+      <section className="max-w-7xl mx-auto px-6 pt-20 md:pt-32 pb-10 md:pb-16 border-b border-slate-100">
+        <div>
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <button onClick={() => router.back()}
               className="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-green-500 transition-colors mb-10 group">
@@ -52,8 +52,8 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         </div>
       </section>
 
-      <section className="pt-16 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+        <div>
           <motion.article initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             className="lg:col-span-8 space-y-4">
             {sections.map((s, i) => {
@@ -95,10 +95,10 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
               className="mt-16 glass-panel rounded-3xl p-8">
               <h3 className="font-['Bebas_Neue'] text-2xl text-slate-950 mb-2">Stay updated on Voice AI</h3>
               <p className="text-sm text-slate-500 mb-6">Join 1,200+ businesses receiving weekly insights on conversational AI.</p>
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input type="email" placeholder="your@email.com"
-                  className="flex-1 bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-green-500 transition-colors" />
-                <button className="bg-green-500 text-white font-bold text-xs px-6 py-2.5 rounded-xl hover:bg-green-600 transition-all uppercase tracking-wider">Join</button>
+                  className="flex-1 bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-500 transition-colors min-h-[48px]" />
+                <button className="bg-green-500 text-white font-bold text-xs px-6 py-3 rounded-xl hover:bg-green-600 transition-all uppercase tracking-wider min-h-[48px]">Join</button>
               </div>
             </motion.div>
           </motion.article>
@@ -134,7 +134,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 mt-24">
+      <section className="max-w-7xl mx-auto px-6 py-12 md:py-24">
         <motion.div initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
           className="bg-slate-950 rounded-[40px] p-10 md:p-16 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/10 blur-[100px] pointer-events-none" />

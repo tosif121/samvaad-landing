@@ -57,14 +57,14 @@ const FEATURES = [
   },
   {
     icon: Brain,
-    color: '#8b5cf6',
+    color: '#06b6d4',
     tag: 'Gemini Live',
     title: 'AI Understands',
     desc: 'Gemini Live AI processes the conversation. Context-aware, handles objections, remembers the full call — feels completely natural.',
     visual: (
       <div
         className="font-mono text-xs px-4 py-2.5 rounded-xl border w-fit"
-        style={{ background: 'rgba(139,92,246,0.06)', color: '#8b5cf6', borderColor: 'rgba(139,92,246,0.2)' }}
+        style={{ background: 'rgba(6,182,212,0.06)', color: '#06b6d4', borderColor: 'rgba(6,182,212,0.2)' }}
       >
         <motion.span animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1.8, repeat: Infinity }}>
           ▶ Gemini processing... 120ms → response streaming
@@ -188,7 +188,7 @@ const FEATURES = [
   },
   {
     icon: MessageSquare,
-    color: '#6366f1',
+    color: '#14b8a6',
     tag: 'Multi-Modal',
     title: 'Omni-Channel Communication',
     desc: 'Uninterrupted multi-modal communication across Voice, SMS, Chat, and Email — all from one unified AI platform.',
@@ -198,7 +198,7 @@ const FEATURES = [
           <span
             key={t}
             className="text-xs font-semibold px-3 py-1 rounded-full"
-            style={{ background: 'rgba(99,102,241,0.08)', color: '#6366f1', border: '1px solid rgba(99,102,241,0.2)' }}
+            style={{ background: 'rgba(20,184,166,0.08)', color: '#14b8a6', border: '1px solid rgba(20,184,166,0.2)' }}
           >
             {t}
           </span>
@@ -230,14 +230,14 @@ const FEATURES = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-white py-24 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto">
+    <section id="how-it-works" className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-24 bg-white">
+      <div>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 text-center"
+          className="mb-12 md:mb-20 text-center"
         >
           <span className="inline-block text-[10px] font-black tracking-[0.2em] uppercase border border-black/10 rounded-full px-4 py-1.5 text-black/40 mb-4">
             Features
@@ -265,7 +265,7 @@ export default function HowItWorks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: 0.05 }}
-                className={`flex flex-col md:flex-row items-center gap-8 py-10 ${isEven ? '' : 'md:flex-row-reverse'}`}
+                className={`flex flex-col md:flex-row md:items-center gap-8 py-5 md:py-10 ${isEven ? '' : 'md:flex-row-reverse'}`}
               >
                 {/* Left/Right — title side */}
                 <div className="flex-1 flex flex-col gap-3">

@@ -6,12 +6,12 @@ import { PRICING } from '../lib/constants';
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="bg-white py-24 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto">
+    <section id="pricing" className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-24 bg-white">
+      <div>
 
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="mb-16 text-center">
+          className="mb-10 md:mb-16 text-center">
           <span className="inline-block text-[10px] font-black tracking-[0.2em] uppercase border border-black/10 rounded-full px-4 py-1.5 text-black/40 mb-4">
             Pricing
           </span>
@@ -72,10 +72,10 @@ export default function Pricing() {
 
               {/* CTA */}
               <Link href="/demo"
-                className={`text-center py-3 rounded-xl text-sm font-black tracking-wide uppercase transition-all duration-200 ${
+                className={`text-center py-4 rounded-xl text-sm font-black tracking-wide uppercase transition-all duration-200 min-h-[48px] flex items-center justify-center ${
                   plan.popular
-                    ? 'bg-green-500 text-white hover:bg-green-600 hover:shadow-[0_8px_20px_rgba(34,197,94,0.3)]'
-                    : 'border border-black/10 text-black hover:border-black/30 hover:bg-black/3'
+                    ? 'bg-green-500 text-white hover:bg-green-600 hover:shadow-[0_8px_20px_rgba(34,197,94,0.3)] active:scale-[0.98]'
+                    : 'border border-black/10 text-black hover:border-black/30 hover:bg-black/3 active:bg-black/5'
                 }`}>
                 {plan.cta}
               </Link>

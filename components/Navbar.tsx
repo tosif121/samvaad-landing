@@ -33,6 +33,7 @@ export default function Navbar() {
               width={180}
               height={80}
               className="object-contain"
+              style={{ height: 'auto' }}
               priority
             />
             <span className="hidden sm:block text-sm font-bold text-black/70 tracking-widest uppercase border-l border-black/20 pl-3">
@@ -66,11 +67,11 @@ export default function Navbar() {
 
           {/* Hamburger */}
           <button 
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-black/5 transition-colors hover:bg-black/10" 
+            className="md:hidden w-12 h-12 flex items-center justify-center rounded-full bg-black/5 transition-all active:scale-95 hover:bg-black/10" 
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
-            <div className="w-5 flex flex-col gap-1.5">
+            <div className="w-6 flex flex-col gap-1.5">
               <span className={`h-0.5 bg-black transition-all duration-300 ${open ? 'rotate-45 translate-y-2' : ''}`} />
               <span className={`h-0.5 bg-black transition-all duration-300 ${open ? 'opacity-0' : ''}`} />
               <span className={`h-0.5 bg-black transition-all duration-300 ${open ? '-rotate-45 -translate-y-2' : ''}`} />
@@ -84,30 +85,37 @@ export default function Navbar() {
         {open && (
           <motion.div
             className="fixed inset-0 z-[60] bg-white flex flex-col items-center justify-center gap-10"
-            initial={{ opacity: 0, x: '100%' }} 
-            animate={{ opacity: 1, x: 0 }} 
-            exit={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0, y: '-100%' }} 
+            animate={{ opacity: 1, y: 0 }} 
+            exit={{ opacity: 0, y: '-100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
           >
+            {/* Background Accent */}
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+                 style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
+
             {/* Close button inside mobile menu */}
             <button 
-              className="absolute top-8 right-8 w-12 h-12 flex items-center justify-center rounded-full bg-black/5"
+              className="absolute top-8 right-8 w-14 h-14 flex items-center justify-center rounded-full bg-black/5 active:scale-95 transition-all"
               onClick={() => setOpen(false)}
+              aria-label="Close menu"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
 
-            <Image src="/images/logo.png" alt="Iotcom.io" width={140} height={42} className="object-contain mb-8" />
+            <Link href="/" onClick={() => setOpen(false)}>
+              <Image src="/images/logo.png" alt="Iotcom.io" width={160} height={48} className="object-contain mb-8" style={{ height: 'auto' }} />
+            </Link>
             
-            <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-6 w-full px-10">
               {NAV_LINKS.map((l, i) => (
                 <motion.a
                   key={l.label} 
                   href={l.href}
-                  className="font-sans font-black text-4xl text-white tracking-tighter uppercase italic"
+                  className="w-full text-center py-4 font-sans font-black text-3xl text-black tracking-tighter uppercase italic border-b border-black/5 active:bg-black/5 rounded-xl transition-all"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
@@ -120,7 +128,7 @@ export default function Navbar() {
 
             <motion.a 
               href="/demo" 
-              className="mt-8 bg-green-500 text-white font-black px-10 py-4 text-lg rounded-xl uppercase tracking-widest shadow-lg shadow-green-500/20"
+              className="mt-4 bg-green-500 text-white font-black px-12 py-5 text-xl rounded-2xl uppercase tracking-widest shadow-xl shadow-green-500/30 active:scale-95 transition-all"
               initial={{ opacity: 0 }} 
               animate={{ opacity: 1 }} 
               transition={{ delay: 0.5 }}

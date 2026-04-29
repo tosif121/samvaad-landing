@@ -47,25 +47,69 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <title>Samvaad — Human-Like AI Voice Bot for Business | Iotcom.io</title>
-        <meta name="description" content="Automate your business calls with Samvaad. 24/7 AI-powered inbound & outbound call handling in Hindi, English & Hinglish. Starting at ₹2/min." />
-        <meta property="og:title" content="Samvaad — Human-Like AI Voice Bot for Business" />
-        <meta property="og:description" content="Automate your business calls with Samvaad. 24/7 AI-powered inbound & outbound call handling." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'SoftwareApplication',
-              name: 'Samvaad',
-              applicationCategory: 'BusinessApplication',
-              operatingSystem: 'Cloud',
-              description: 'AI Voice Bot for Business — automate customer calls with human-like intelligence in Hindi, English & Hinglish.',
-              offers: { '@type': 'Offer', price: '2', priceCurrency: 'INR', priceSpecification: { '@type': 'UnitPriceSpecification', price: '2', priceCurrency: 'INR', unitText: 'minute' } },
-              provider: { '@type': 'Organization', name: 'Iotcom.io', telephone: '+919358535763' },
-            }),
+            __html: JSON.stringify([
+              {
+                '@context': 'https://schema.org',
+                '@type': 'SoftwareApplication',
+                name: 'Samvaad',
+                applicationCategory: 'BusinessApplication',
+                operatingSystem: 'Cloud',
+                description: 'AI Voice Bot for Business — automate customer calls with human-like intelligence in Hindi, English & Hinglish.',
+                offers: { 
+                  '@type': 'Offer', 
+                  price: '2', 
+                  priceCurrency: 'INR', 
+                  priceSpecification: { 
+                    '@type': 'UnitPriceSpecification', 
+                    price: '2', 
+                    priceCurrency: 'INR', 
+                    unitText: 'minute' 
+                  } 
+                },
+                provider: { 
+                  '@type': 'Organization', 
+                  name: 'Iotcom.io', 
+                  url: 'https://samwaad.iotcom.io',
+                  telephone: '+919358535763' 
+                },
+              },
+              {
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'Does Samvaad support Hindi and other Indian languages?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes, Samvaad natively supports Hindi, English, and Hinglish (a natural mix of both). It automatically detects the language from the first word spoken.'
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'How much does Samvaad AI voice calling cost?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Pricing starts at just ₹2 per minute. We offer flexible pay-as-you-go models and volume discounts for larger businesses.'
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Can Samvaad integrate with my existing CRM?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Absolutely. Samvaad seamlessly integrates with popular CRMs like Salesforce, HubSpot, and custom internal systems to log every call and update lead status automatically.'
+                    }
+                  }
+                ]
+              }
+            ]),
           }}
         />
       </head>

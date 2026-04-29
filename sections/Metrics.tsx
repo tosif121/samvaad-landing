@@ -7,7 +7,7 @@ const IMPACT = [
   { icon: Phone, value: 90, suffix: '%', label: 'Automates Inbound/Outbound Calls', color: '#22c55e' },
   { icon: UserCheck, value: 80, suffix: '%', label: 'Reduces Customer Effort Score (CES)', color: '#3b82f6' },
   { icon: TrendingDown, value: 50, suffix: '%', label: 'Brings down Errors & Inaccuracies', color: '#f59e0b' },
-  { icon: Clock, value: 70, suffix: '%', label: 'Decreases Average Handling Time (AHT)', color: '#8b5cf6' },
+  { icon: Clock, value: 70, suffix: '%', label: 'Decreases Average Handling Time (AHT)', color: '#06b6d4' },
   { icon: PhoneMissed, value: 55, suffix: '%', label: 'Drops Call Abandonment Rates', color: '#ec4899' },
 ];
 
@@ -62,14 +62,14 @@ export default function Metrics() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section className="bg-white py-24 px-6 md:px-12" id="metrics">
-      <div className="max-w-7xl mx-auto" ref={ref}>
+    <section className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-24 bg-white" id="metrics">
+      <div ref={ref}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 text-center"
+          className="mb-10 md:mb-16 text-center"
         >
           <span className="inline-block text-[10px] font-black tracking-[0.2em] uppercase border border-black/10 rounded-full px-4 py-1.5 text-black/40 mb-4">
             Performance
@@ -126,11 +126,11 @@ export default function Metrics() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
-                className="grid grid-cols-3 px-6 py-3.5 hover:bg-green-50/40 transition-colors"
+                className="grid grid-cols-3 px-6 py-4 hover:bg-green-50/40 active:bg-green-100/50 transition-colors"
               >
                 <span className="text-xs text-black/35 font-medium">{row.category}</span>
                 <span className="text-xs text-black/70 font-semibold">{row.metric}</span>
-                <div className="flex items-center justify-end gap-2">
+                <div className="flex items-center justify-end gap-2 text-right">
                   <span className="text-sm font-black text-green-600">{row.value}</span>
                   <span className="text-xs text-black/30 hidden md:block">· {row.sub}</span>
                 </div>

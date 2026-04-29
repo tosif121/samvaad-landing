@@ -119,7 +119,7 @@ If your business serves the Indian heartland, an English-only bot is a liability
     excerpt: 'Traditional IVR frustrates customers. AI voice bots have natural conversations. The difference in customer satisfaction is not small — it\'s massive.',
     date: 'April 14, 2026',
     readTime: '6 min read',
-    color: '#8b5cf6',
+    color: '#06b6d4',
     featured: false,
     seo: {
       title: 'IVR vs AI Voice Bot: Why Your Business Should Switch | Samvaad',
@@ -246,7 +246,7 @@ AI calling isn't just cheaper — it's more predictable. You know exactly what y
     excerpt: 'Sub-850ms response times. Natural interruptions. Emotional tone detection. Here\'s the technical story behind Samvaad\'s Gemini Live integration.',
     date: 'April 6, 2026',
     readTime: '6 min read',
-    color: '#8b5cf6',
+    color: '#14b8a6',
     featured: false,
     seo: {
       title: 'Gemini Live Voice AI: How Samvaad Achieves Sub-850ms Response | Iotcom',

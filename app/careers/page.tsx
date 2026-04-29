@@ -55,7 +55,7 @@ export default function CareersPage() {
     <main className="min-h-screen bg-white text-black">
 
       {/* Hero */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-20">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-24 md:pt-32 pb-12 md:pb-20">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[10px] font-black tracking-[0.2em] uppercase border border-black/10 rounded-full px-4 py-1.5 text-black/40 mb-5">
             Careers at Iotcom.io
@@ -71,8 +71,8 @@ export default function CareersPage() {
       </section>
 
       {/* What We Build */}
-      <section className="py-20 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20">
+        <div>
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <span className="inline-block text-[10px] font-black tracking-[0.2em] uppercase border border-black/10 rounded-full px-4 py-1.5 text-black/40 mb-4">
               Our products
@@ -104,8 +104,8 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-      <section className="py-20 px-6 md:px-12 bg-slate-50/50">
-        <div className="max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20 bg-slate-50/50">
+        <div>
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <span className="inline-block text-[10px] font-black tracking-[0.2em] uppercase border border-black/10 rounded-full px-4 py-1.5 text-black/40 mb-4">
               Join the team
@@ -136,7 +136,7 @@ export default function CareersPage() {
                 </div>
                 <a
                   href={`mailto:contact@iotcom.io?subject=Application: ${o.role}`}
-                  className="shrink-0 inline-flex items-center gap-2 bg-slate-950 text-white font-bold text-xs px-6 py-3 rounded-xl hover:bg-green-500 transition-all duration-200 uppercase tracking-wider"
+                  className="shrink-0 inline-flex items-center justify-center gap-2 bg-slate-950 text-white font-bold text-xs px-8 py-4 rounded-xl hover:bg-green-500 active:scale-95 transition-all duration-200 uppercase tracking-wider min-h-[48px]"
                 >
                   Apply Now <ArrowRight size={14} />
                 </a>
@@ -157,7 +157,7 @@ export default function CareersPage() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-24 text-center">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-24 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <div className="glass-panel rounded-[40px] p-12 md:p-20 relative overflow-hidden">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-48 bg-green-500/10 blur-[80px] pointer-events-none" />

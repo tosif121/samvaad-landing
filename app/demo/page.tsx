@@ -73,7 +73,7 @@ export default function DemoPage() {
 
   return (
     <main className="min-h-screen bg-white text-black">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-24 md:pt-32 pb-16 md:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
           {/* ── Left ── */}
@@ -90,7 +90,7 @@ export default function DemoPage() {
             </h1>
 
             <p className="text-black/55 text-base leading-relaxed mb-8 max-w-sm font-medium">
-              30-minute live demo. We'll call a real number in front of you — in Hindi, English, or Hinglish — for your exact use case.
+              30-minute live demo. We&apos;ll call a real number in front of you — in Hindi, English, or Hinglish — for your exact use case.
             </p>
 
             {/* What you get */}
@@ -135,7 +135,7 @@ export default function DemoPage() {
                   </div>
                   <h2 className="font-['Bebas_Neue'] text-4xl text-black mb-3">Demo Booked!</h2>
                   <p className="text-black/55 text-sm leading-relaxed mb-8">
-                    We'll reach out to <span className="font-bold text-black">{form.email}</span> within 24 hours to confirm your slot.
+                    We&apos;ll reach out to <span className="font-bold text-black">{form.email}</span> within 24 hours to confirm your slot.
                   </p>
                   <Link href="/"
                     className="inline-flex items-center gap-2 bg-green-500 text-white font-bold text-sm px-6 py-3 rounded-xl hover:bg-green-600 transition-colors">
@@ -148,7 +148,7 @@ export default function DemoPage() {
 
                   <div className="mb-2">
                     <h2 className="font-['Bebas_Neue'] text-3xl text-black leading-none mb-1">Schedule your demo</h2>
-                    <p className="text-xs text-black/40">Fill in your details and we'll be in touch within 24 hours.</p>
+                    <p className="text-xs text-black/40">Fill in your details and we&apos;ll be in touch within 24 hours.</p>
                   </div>
 
                   {serverError && (
@@ -172,8 +172,14 @@ export default function DemoPage() {
                   {/* Phone + Company */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <FormField label="Phone Number *" error={errors.phone} icon={<Phone size={14} />}>
-                      <input className={inp(!!errors.phone)} placeholder="+91 98765 43210"
-                        value={form.phone} onChange={e => set('phone', e.target.value)} />
+                      <input 
+                        type="tel"
+                        inputMode="tel"
+                        className={inp(!!errors.phone)} 
+                        placeholder="+91 98765 43210"
+                        value={form.phone} 
+                        onChange={e => set('phone', e.target.value)} 
+                      />
                     </FormField>
                     <FormField label="Company" icon={<Building2 size={14} />}>
                       <input className={inp(false)} placeholder="Acme Corp"
@@ -183,10 +189,10 @@ export default function DemoPage() {
 
                   {/* Use case */}
                   <FormField label="Primary Use Case">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                       {USE_CASES.map(u => (
                         <button key={u.value} type="button" onClick={() => set('useCase', u.value)}
-                          className={`px-3 py-2.5 text-xs font-semibold rounded-xl border transition-all text-left ${
+                          className={`px-3 py-3.5 text-xs font-semibold rounded-xl border transition-all text-left min-h-[48px] ${
                             form.useCase === u.value
                               ? 'border-green-500/50 bg-green-500/10 text-green-700'
                               : 'border-black/8 text-black/50 hover:border-black/20 hover:text-black/70'
@@ -199,10 +205,10 @@ export default function DemoPage() {
 
                   {/* Volume */}
                   <FormField label="Monthly Call Volume">
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid grid-cols-2 gap-2.5">
                       {VOLUMES.map(v => (
                         <button key={v.value} type="button" onClick={() => set('callVolume', v.value)}
-                          className={`px-3 py-2.5 text-xs font-semibold rounded-xl border transition-all text-left ${
+                          className={`px-3 py-3.5 text-xs font-semibold rounded-xl border transition-all text-left min-h-[48px] ${
                             form.callVolume === v.value
                               ? 'border-green-500/50 bg-green-500/10 text-green-700'
                               : 'border-black/8 text-black/50 hover:border-black/20 hover:text-black/70'
@@ -257,4 +263,4 @@ function FormField({ label, error, icon, children }: {
 }
 
 const inp = (hasError: boolean) =>
-  `w-full bg-white border ${hasError ? 'border-red-300' : 'border-black/10'} text-black text-sm px-4 py-2.5 rounded-xl outline-none focus:border-green-500/60 focus:bg-green-500/3 transition-all placeholder:text-black/30`;
+  `w-full bg-white border ${hasError ? 'border-red-300' : 'border-black/10'} text-black text-sm px-4 py-3 rounded-xl outline-none focus:border-green-500/60 focus:bg-green-500/3 transition-all placeholder:text-black/30 min-h-[44px]`;
