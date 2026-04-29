@@ -231,7 +231,7 @@ const FEATURES = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-white py-24 px-6 md:px-12">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

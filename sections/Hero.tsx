@@ -115,7 +115,7 @@ export default function Hero() {
 
   return (
     <section className="pt-32 pb-20 px-4 md:px-8" id="hero">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
 
         {/* Top headline */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}

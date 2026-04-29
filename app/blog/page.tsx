@@ -12,7 +12,7 @@ export default function BlogPage() {
     <main className="min-h-screen bg-white text-black">
 
       {/* Header */}
-      <section className="max-w-5xl mx-auto px-6 md:px-12 pt-32 pb-16">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[10px] font-black tracking-[0.2em] uppercase border border-black/10 rounded-full px-4 py-1.5 text-black/40 mb-5">
             Iotcom.io Blog
@@ -27,7 +27,7 @@ export default function BlogPage() {
       </section>
 
       {/* Featured post */}
-      <section className="max-w-5xl mx-auto px-6 md:px-12 mb-8">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 mb-8">
         <Link href={`/blog/${featured.slug}`} className="block">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             className="glass-panel rounded-2xl p-8 md:p-10 group cursor-pointer hover:scale-[1.005] transition-transform duration-300">
@@ -53,7 +53,7 @@ export default function BlogPage() {
       </section>
 
       {/* Rest of posts */}
-      <section className="max-w-5xl mx-auto px-6 md:px-12 pb-24">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {rest.map((post, i) => (
             <Link href={`/blog/${post.slug}`} key={post.slug} className="block">

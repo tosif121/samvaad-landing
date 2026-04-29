@@ -25,7 +25,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
   return (
     <main className="min-h-screen bg-white text-slate-900 pb-24">
       <section className="pt-32 pb-16 border-b border-slate-100">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <button onClick={() => router.back()}
               className="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-green-500 transition-colors mb-10 group">
@@ -44,15 +44,6 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
             <h1 className="font-['Bebas_Neue'] text-5xl md:text-7xl text-slate-950 tracking-tight leading-none mb-8">{post.title}</h1>
             <p className="text-slate-500 text-lg leading-relaxed max-w-2xl mb-10 font-medium">{post.excerpt}</p>
             <div className="flex flex-wrap items-center gap-6">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center font-['Bebas_Neue'] text-xl text-green-600">
-                  {post.author.name.charAt(0)}
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-slate-950 leading-none mb-0.5">{post.author.name}</p>
-                  <p className="text-[11px] text-slate-400 font-medium uppercase tracking-wider">{post.author.role}</p>
-                </div>
-              </div>
               <div className="flex items-center gap-2 text-xs text-slate-400 font-medium glass-panel px-4 py-2 rounded-full">
                 <Calendar size={13} /> {post.date}
               </div>
@@ -61,7 +52,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         </div>
       </section>
 
-      <section className="pt-16 max-w-4xl mx-auto px-6">
+      <section className="pt-16 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <motion.article initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             className="lg:col-span-8 space-y-4">
@@ -143,7 +134,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-6 mt-24">
+      <section className="max-w-7xl mx-auto px-6 mt-24">
         <motion.div initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
           className="bg-slate-950 rounded-[40px] p-10 md:p-16 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/10 blur-[100px] pointer-events-none" />

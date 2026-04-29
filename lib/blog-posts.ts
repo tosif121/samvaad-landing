@@ -8,11 +8,6 @@ export type BlogPost = {
   color: string;
   featured: boolean;
   content: string; // Markdown or HTML content
-  author: {
-    name: string;
-    role: string;
-    image: string;
-  };
   seo: {
     title: string;
     description: string;
@@ -30,11 +25,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '4 min read',
     color: '#22c55e',
     featured: true,
-    author: {
-      name: 'Tosif Ahmed',
-      role: 'CEO, Iotcom.io',
-      image: '/images/authors/tosif.jpg'
-    },
     seo: {
       title: 'Never Miss a Call: AI Voice Bots for Business | Samvaad',
       description: 'Discover how AI voice bots can handle every customer call 24/7, ensuring your business never misses an opportunity. Learn about automated call handling in India.',
@@ -83,11 +73,6 @@ The expectation for instant communication is at an all-time high. Businesses tha
     readTime: '5 min read',
     color: '#3b82f6',
     featured: false,
-    author: {
-      name: 'Neha Sharma',
-      role: 'Head of Product, Iotcom.io',
-      image: '/images/authors/neha.jpg'
-    },
     seo: {
       title: 'Hindi-First AI Voice Bots: Bridging the Language Gap in India',
       description: 'Why your business needs an AI voice bot that understands Hindi and Hinglish. Explore how native language support improves customer satisfaction in India.',
@@ -136,11 +121,6 @@ If your business serves the Indian heartland, an English-only bot is a liability
     readTime: '6 min read',
     color: '#8b5cf6',
     featured: false,
-    author: {
-      name: 'Tosif Ahmed',
-      role: 'CEO, Iotcom.io',
-      image: '/images/authors/tosif.jpg'
-    },
     seo: {
       title: 'IVR vs AI Voice Bot: Why Your Business Should Switch | Samvaad',
       description: 'Stop frustrating customers with "Press 1" menus. Compare traditional IVR with AI Voice Bots and see why conversational AI is the future of customer service.',
@@ -192,11 +172,6 @@ Switching from an IVR to an AI Voice Bot isn't just a technical upgrade; it's a 
     readTime: '5 min read',
     color: '#f59e0b',
     featured: false,
-    author: {
-      name: 'Tosif Ahmed',
-      role: 'CEO, Iotcom.io',
-      image: '/images/authors/tosif.jpg',
-    },
     seo: {
       title: 'AI Calling Cost Breakdown: What You Pay Per Call | Samvaad',
       description: 'A transparent breakdown of AI voice bot pricing in India. Compare per-minute rates, setup costs, and ROI vs human agents.',
@@ -273,11 +248,6 @@ AI calling isn't just cheaper — it's more predictable. You know exactly what y
     readTime: '6 min read',
     color: '#8b5cf6',
     featured: false,
-    author: {
-      name: 'Tosif Ahmed',
-      role: 'CEO, Iotcom.io',
-      image: '/images/authors/tosif.jpg',
-    },
     seo: {
       title: 'Gemini Live Voice AI: How Samvaad Achieves Sub-850ms Response | Iotcom',
       description: 'A technical deep-dive into how Samvaad uses Google Gemini Live for real-time, low-latency AI voice conversations in Hindi and English.',
@@ -358,11 +328,6 @@ Gemini Live isn't just a faster LLM — it's a fundamentally different architect
     readTime: '5 min read',
     color: '#ec4899',
     featured: false,
-    author: {
-      name: 'Tosif Ahmed',
-      role: 'CEO, Iotcom.io',
-      image: '/images/authors/tosif.jpg',
-    },
     seo: {
       title: 'Voice Automation for Debt Collections India | Samvaad AI',
       description: 'How AI voice bots are improving debt collection contact rates, reducing agent burnout, and cutting costs for NBFCs and banks in India.',
@@ -440,11 +405,6 @@ Voice automation in collections isn't about removing the human element from sens
     readTime: '7 min read',
     color: '#10b981',
     featured: false,
-    author: {
-      name: 'Tosif Ahmed',
-      role: 'CEO, Iotcom.io',
-      image: '/images/authors/tosif.jpg'
-    },
     seo: {
       title: 'Voice Search SEO Strategy Guide 2026 | Samvaad',
       description: 'Master Voice Search SEO in 2026. Learn about E-E-A-T, Core Web Vitals for voice, and how to optimize for conversational AI intents.',

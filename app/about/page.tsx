@@ -44,7 +44,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white text-black">
 
       {/* Hero */}
-      <section className="max-w-5xl mx-auto px-6 md:px-12 pt-32 pb-20">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-20">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[10px] font-black tracking-[0.2em] uppercase border border-black/10 rounded-full px-4 py-1.5 text-black/40 mb-5">
             About Iotcom.io
@@ -61,13 +61,13 @@ export default function AboutPage() {
 
       {/* Stats */}
       <section className="py-10">
-        <div className="max-w-5xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           {STATS.map((s, i) => <StatCard key={i} {...s} i={i} />)}
         </div>
       </section>
 
       {/* Timeline */}
-      <section className="max-w-5xl mx-auto px-6 md:px-12 py-24">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-24">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="mb-12">
           <span className="inline-block text-[10px] font-black tracking-[0.2em] uppercase border border-black/10 rounded-full px-4 py-1.5 text-black/40 mb-4">
@@ -104,7 +104,7 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="bg-white py-20 px-6 md:px-12">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="mb-12">
             <span className="inline-block text-[10px] font-black tracking-[0.2em] uppercase border border-black/10 rounded-full px-4 py-1.5 text-black/40 mb-4">
@@ -136,7 +136,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-5xl mx-auto px-6 md:px-12 py-24 text-center">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-24 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="font-['Bebas_Neue'] text-4xl md:text-6xl text-black tracking-tight leading-none mb-4">
             Ready to see <span className="text-green-500">Samvaad</span> in action?

@@ -63,7 +63,7 @@ export default function Metrics() {
 
   return (
     <section className="bg-white py-24 px-6 md:px-12" id="metrics">
-      <div className="max-w-6xl mx-auto" ref={ref}>
+      <div className="max-w-7xl mx-auto" ref={ref}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
