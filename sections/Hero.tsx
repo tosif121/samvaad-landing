@@ -42,11 +42,15 @@ const ConnectingLines = ({
   agentRef,
   btnRef,
   color,
+  campaignId,
+  agentId,
 }: {
   campaignRef: React.RefObject<HTMLDivElement | null>;
   agentRef: React.RefObject<HTMLDivElement | null>;
   btnRef: React.RefObject<HTMLButtonElement | null>;
   color: string;
+  campaignId: string;
+  agentId: string;
 }) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const [paths, setPaths] = useState({ left: '', right: '' });
@@ -83,13 +87,13 @@ const ConnectingLines = ({
   }, [btnRef, campaignRef, agentRef]);
 
   useEffect(() => {
-    const t = setTimeout(compute, 80);
+    const t = setTimeout(compute, 100);
     window.addEventListener('resize', compute);
     return () => {
       clearTimeout(t);
       window.removeEventListener('resize', compute);
     };
-  }, [compute]);
+  }, [compute, campaignId, agentId]);
 
   return (
     <svg ref={svgRef} className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
@@ -318,6 +322,8 @@ export default function Hero() {
                 agentRef={activeAgentRef}
                 btnRef={btnRef}
                 color={CAMPAIGNS.find((c) => c.id === selCampaign)?.color ?? '#22c55e'}
+                campaignId={selCampaign}
+                agentId={selAgent}
               />
 
               <motion.button
