@@ -178,10 +178,10 @@ export const FOOTER_LINKS = {
     { label: 'Press', href: '#' },
   ],
   Legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
+    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Terms of Service', href: '/terms' },
     { label: 'Security', href: '#' },
-    { label: 'DPDP Compliance', href: '#' },
+    { label: 'DPDP Compliance', href: '/privacy#section-6' },
   ],
   Connect: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/company/iotcom-io-jaipur/posts/?feedView=all' },
