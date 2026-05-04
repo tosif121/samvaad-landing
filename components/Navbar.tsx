@@ -26,7 +26,7 @@ export default function Navbar() {
           }`}
         >
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-105">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src="/images/logo.png"
               alt="Iotcom.io — Samvaad"

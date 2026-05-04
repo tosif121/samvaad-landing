@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FOOTER_LINKS, SITE, SOCIAL_LINKS } from '../lib/constants';
 
 const SocialIcon = ({ href, label, children }: { href: string; label: string; children: React.ReactNode }) => (
@@ -101,14 +102,23 @@ export default function Footer() {
                 <ul className="flex flex-col gap-4">
                   {(links as { label: string; href: string }[]).map((link) => (
                     <li key={link.label}>
-                      <a
-                        href={link.href}
-                        target={link.href.startsWith('http') ? '_blank' : undefined}
-                        rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        className="text-black/55 text-sm font-medium hover:text-black transition-colors duration-200"
-                      >
-                        {link.label}
-                      </a>
+                      {link.href.startsWith('http') ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-black/55 text-sm font-medium hover:text-black transition-colors duration-200"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-black/55 text-sm font-medium hover:text-black transition-colors duration-200"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -118,8 +128,8 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row items-center justify-between border-t border-black/10 pt-10 gap-6">
           <p className="text-black/40 text-xs text-center sm:text-left font-medium">
-            © 2026 Samvaad by{' '}
-            <a href={SITE.url} className="text-orange-500 font-bold hover:underline">
+            © {new Date().getFullYear()} Samvaad by{' '}
+            <a href={SITE.url} target="_blank" rel="noopener noreferrer" className="text-orange-500 font-bold hover:underline">
               Iotcom.io
             </a>{' '}
             · Jaipur, India 🇮🇳
