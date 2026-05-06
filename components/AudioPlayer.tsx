@@ -252,7 +252,6 @@ export default function AudioPlayer({ src = '/audio/example.mp3' }: { src?: stri
       const startTop = container.scrollTop;
       const distance = targetTop - startTop;
 
-      // Calculate duration based on the line's actual time window
       const dur = (line.end - line.start) * 3000;
 
       let startTime: number | null = null;
