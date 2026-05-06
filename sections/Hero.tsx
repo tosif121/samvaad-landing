@@ -1,7 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import AudioPlayer from '@/components/AudioPlayer';
 
 const POINTS = [
@@ -17,8 +16,13 @@ const POINTS = [
 
 export default function Hero() {
   return (
-    <section className="pt-24 md:pt-32 pb-12 md:pb-20 px-4 md:px-8 bg-white" id="hero">
-      <div className="max-w-7xl mx-auto">
+    <section className="pt-24 md:pt-32 pb-12 md:pb-20 px-4 md:px-8 bg-white relative" id="hero">
+      {/* Background texture overlay */}
+      <div
+        className="absolute top-0 left-0 z-0 bg-repeat-y bg-cover bg-center opacity-20 w-full h-full pointer-events-none"
+        style={{ backgroundImage: "url('/images/image.png')" }}
+      />
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           {/* ── LEFT — CONTENT ── */}
           <motion.div
