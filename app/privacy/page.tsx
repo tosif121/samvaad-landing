@@ -172,12 +172,6 @@ export default function PrivacyPage() {
                 </div>
               </div>
             ))}
-
-            {/* Footer links */}
-            <div className="flex gap-4 pt-4 border-t border-black/6">
-              <Link href="/terms" className="text-sm font-semibold text-green-600 hover:underline">Terms of Service →</Link>
-              <Link href="/" className="text-sm font-medium text-black/40 hover:text-black transition-colors">← Back to home</Link>
-            </div>
           </div>
         </div>
       </div>
